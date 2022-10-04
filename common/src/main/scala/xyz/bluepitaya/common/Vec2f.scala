@@ -16,6 +16,7 @@ case class Vec2f(
   lazy val magnitude = Math.sqrt(x * x + y * y)
   lazy val normalize = this / magnitude
   lazy val floor = Vec2f(Math.floor(x), Math.floor(y))
+  lazy val toVec2d = Vec2d(x.toInt, y.toInt)
 
   def changeIfZero(v: => Double) =
     Vec2f(x = if (x == 0) v else x, y = if (y == 0) v else y)
