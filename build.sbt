@@ -11,7 +11,8 @@ lazy val commonSettings = Seq(
     "-feature",
     "-language:_",
     "-unchecked",
-    "-Xfatal-warnings"
+    "-Xfatal-warnings",
+    "-Xlint:unused"
   ),
   sourcesInBase := false,
 
@@ -35,6 +36,9 @@ lazy val common = crossProject(JSPlatform, JVMPlatform)
   .withoutSuffixFor(JVMPlatform)
   .crossType(CrossType.Pure)
   .settings(commonSettings)
+  .jvmSettings(
+    libraryDependencies += "org.scala-js" %% "scalajs-stubs" % "1.1.0",
+  )
   .jsSettings(
     scalaJSLinkerConfig ~= (_.withModuleKind(ModuleKind.CommonJSModule).withSourceMap(false)),
     scalaJSUseMainModuleInitializer := true,

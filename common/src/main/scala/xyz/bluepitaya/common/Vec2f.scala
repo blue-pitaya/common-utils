@@ -1,6 +1,13 @@
 package xyz.bluepitaya.common
 
-case class Vec2f(val x: Double, val y: Double) {
+import scala.scalajs.js.annotation.JSExport
+
+case class Vec2f(
+    @JSExport
+    x: Double,
+    @JSExport
+    y: Double
+) {
   def +(v: Vec2f) = Vec2f(x + v.x, y + v.y)
   def -(v: Vec2f) = Vec2f(x - v.x, y - v.y)
   def *(n: Double) = Vec2f(x * n, y * n)
