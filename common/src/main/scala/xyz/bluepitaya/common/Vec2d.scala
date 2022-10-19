@@ -12,6 +12,8 @@ case class Vec2d(
   def -(v: Vec2d): Vec2d = Vec2d(x - v.x, y - v.y)
   def *(n: Int): Vec2d = Vec2d(x * n, y * n)
   def *(f: Double): Vec2d = Vec2d((x * f).toInt, (y * f).toInt)
+  def /(n: Int): Vec2d = Vec2d(x / n, y / n)
+  def /(f: Double): Vec2d = Vec2d((x / f).toInt, (y / f).toInt)
 
   def matrixUntil(until: Vec2d): List[Vec2d] = Vec2d
     .matrix(copy(), until - Vec2d(1, 1))
