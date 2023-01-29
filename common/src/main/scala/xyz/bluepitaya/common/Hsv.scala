@@ -46,7 +46,7 @@ case class Hsv(h: Double, s: Double, v: Double, a: Double) {
       case _l             => s * v / (2 - l * 2)
     }
 
-    s"hsl($h ${"%.2f".format(_s * 100)} ${"%.2f".format(l * 100)})"
+    s"hsl($h ${"%.2f".format(_s * 100)}% ${"%.2f".format(l * 100)}%)"
   }
 }
 
