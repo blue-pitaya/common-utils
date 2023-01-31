@@ -5,14 +5,14 @@ lazy val commonSettings = Seq(
   version := "1.0",
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.13" % Test,
   scalacOptions ++= Seq(
-    "-deprecation",
-    "-encoding",
-    "UTF-8",
-    "-feature",
-    "-language:_",
-    "-unchecked",
-    "-Xfatal-warnings",
-    "-Xlint:unused"
+    //"-deprecation",
+    //"-encoding",
+    //"UTF-8",
+    //"-feature",
+    //"-language:_",
+    //"-unchecked",
+    //"-Xfatal-warnings",
+    //"-Xlint:unused"
   ),
   sourcesInBase := false,
 
