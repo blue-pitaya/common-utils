@@ -94,22 +94,23 @@ object Hsv {
   }
 
   val sketchColors = Seq(
-    "#D0021B",
-    "#F5A623",
-    "#F8E71C",
-    "#8B572A",
-    "#7ED321",
-    "#417505",
-    "#BD10E0",
-    "#9013FE",
-    "#4A90E2",
-    "#50E3C2",
-    "#B8E986",
-    "#000000",
-    "#4A4A4A",
-    "#9B9B9B",
-    "#FFFFFF"
-  ).map(fromHashedHexValue).flatten
+    fromRgb(0xd0, 0x02, 0x1b),
+    fromRgb(0xf5, 0xa6, 0x23),
+    fromRgb(0xf8, 0xe7, 0x1c),
+    fromRgb(0x8b, 0x57, 0x2a),
+    fromRgb(0x7e, 0xd3, 0x21),
+    fromRgb(0x41, 0x75, 0x05),
+    fromRgb(0xbd, 0x10, 0xe0),
+    fromRgb(0x90, 0x13, 0xfe),
+    fromRgb(0x4a, 0x90, 0xe2),
+    fromRgb(0x50, 0xe3, 0xc2),
+    fromRgb(0xb8, 0xe9, 0x86),
+    fromRgb(0x00, 0x00, 0x00),
+    fromRgb(0x4a, 0x4a, 0x4a),
+    fromRgb(0x9b, 0x9b, 0x9b),
+    fromRgb(0xff, 0xff, 0xff)
+  )
 
   def white = Hsv.fromRgb(255, 255, 255)
+  def black = Hsv.fromRgb(0, 0, 0)
 }
